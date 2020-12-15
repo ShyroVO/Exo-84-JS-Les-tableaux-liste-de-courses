@@ -13,7 +13,6 @@ let articles = [
 // Votre code à partir d'ici :
 let liste = document.getElementById('listeCourse');
 
-let textAjout = document.getElementById('contenusAjout').toString();
 let boutonAjout = document.getElementById('ajouter');
 
 for (let i = 0; i < articles.length; i++) {
@@ -23,9 +22,8 @@ for (let i = 0; i < articles.length; i++) {
 }
 
 boutonAjout.addEventListener('click', function ajoutItem() {
+    let textAjout = document.getElementById('contenusAjout').value;
     articles.push(textAjout);
     console.log(articles);
+    return articles;
 })
-
-
-
