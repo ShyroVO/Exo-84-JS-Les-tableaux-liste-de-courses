@@ -12,10 +12,10 @@ let articles = [
 
 // Votre code à partir d'ici :
 let liste = document.getElementById('listeCourse');
-
 let boutonAjout = document.getElementById('ajouter');
+let i = 0;
 
-for (let i = 0; i < articles.length; i++) {
+for (i = 0; i < articles.length; i++) {
     let nouveau = document.createElement('li');
     nouveau.innerHTML = articles[i];
     liste.appendChild(nouveau);
@@ -23,7 +23,11 @@ for (let i = 0; i < articles.length; i++) {
 
 boutonAjout.addEventListener('click', function ajoutItem() {
     let textAjout = document.getElementById('contenusAjout').value;
+    let nouveauItem = document.createElement('li');
     articles.push(textAjout);
-    console.log(articles);
-    return articles;
+    nouveauItem.innerHTML = articles[i];
+    liste.appendChild(nouveauItem);
+    i++
 })
+
+
