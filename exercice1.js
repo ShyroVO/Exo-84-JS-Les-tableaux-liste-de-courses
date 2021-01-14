@@ -40,4 +40,3 @@ boutonAjout.addEventListener('click', function ajoutItem() {
     nouveauItem.appendChild(masquer);
     i++
 })
-
